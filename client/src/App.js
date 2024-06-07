@@ -27,12 +27,14 @@ import Booking from "./pages/Event-Booking/Booking";
 
 
 function App() {
+
   return (
     <div className="App">
       <Switch>
         <Route path="/sign-up" exact component={SignUp} />
         <Route path="/sign-in" exact component={SignIn} />
         <Main>
+        <ProtectedRoute exact path="/" component={ProtectedRoute} />
           <ProtectedRoute exact path="/home" component={Home} />
           <ProtectedRoute exact path="/profile" component={Profile} />
           <ProtectedRoute exact path="/eventschedule" component={EventsList} />
